@@ -9,9 +9,9 @@
 """
 
 from random import randint
+from colorama import Fore, Style
 
-
-text = "\n 1"
+text = ""
 
 
 def triangle_check(a, b, c):
@@ -68,10 +68,11 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 def number_guess():
     LOWER_LIMIT = 0
     UPPER_LIMIT = 100
-    COUNT_TRY = 2
+    COUNT_TRY = 11
     RAND_NUMBER = randint(LOWER_LIMIT, UPPER_LIMIT)
     is_win = True
-    for _ in range(COUNT_TRY + 1):
+    for _ in range(COUNT_TRY - 1):
+        # ValueError не обрабатываю вводить только числа
         number = int(input('Введи число от 0 до 1000: '))
         if number > RAND_NUMBER:
             print('Ваше число БОЛЬШЕ загаданного')
@@ -82,19 +83,39 @@ def number_guess():
         else:
             print('Вы выиграли!')
             is_win = True
+            break
     if not is_win:
         print('К сожалению вы проиграли')
 
 
-def main():
-    triangle_check(1, 2, 2)
-    print()
-    simple()
+def run():
+    text_command = """
+1 - Проверить является ли треугольник равнобедренным или равносторонним
+2 - Проверить число простое или составное
+3 - Угадать число за 10 попыток
+4 - Выход из программы
+Сделайте Ваш выбор:       
+"""
+    while True:
+        command = input(Fore.BLUE + text_command + Style.RESET_ALL)
+        if command == '4':
+            break
 
-    number_guess()
+        if command == '1':
+            print(Fore.GREEN + '\nПроверка треугольника:' + Style.RESET_ALL)
+            a = int(input('Введи число: '))
+            b = int(input('Введи число: '))
+            c = int(input('Введи число: '))
+            triangle_check(a, b, c)
+
+        if command == '2':
+            print(Fore.GREEN + '\nПроверить число простое или составное:' + Style.RESET_ALL)
+            simple()
+
+        if command == '3':
+            print(Fore.GREEN + '\nНеобходимо угадать число за 10 попыток:' + Style.RESET_ALL)
+            number_guess()
 
 
 if __name__ == "__main__":
-    # app(text)
-    main()
-
+    run()
