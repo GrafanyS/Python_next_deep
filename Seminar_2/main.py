@@ -203,3 +203,7 @@ class Bank:
 
             case "exit":
                 return self._exit()
+
+
+client = Bank()
+print(client.start(mode="in", cash=100))
