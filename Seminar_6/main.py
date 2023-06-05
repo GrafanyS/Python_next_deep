@@ -2,7 +2,8 @@ import new_task as nt
 import generate as gen
 from sys import argv
 
-from Python_next_deep.Seminar_6 import task, date_validate
+from Python_next_deep.Seminar_6 import task
+import date_validate
 
 if __name__ == '__main__':
     _, *arg = argv
@@ -24,3 +25,5 @@ if __name__ == '__main__':
 
     data = '12.01.1999'
     print(date_validate.date_validator(data))
+    # раскоментировать добавлена возможность запуска в терминале с передачей даты на проверку
+    # print(date_validate.date_validator(argv[1]))

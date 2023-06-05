@@ -1,5 +1,7 @@
 from datetime import datetime
 
+__all__ = ['check_year', 'date_validator']
+
 
 """
 Создайте модуль и напишите в нём функцию, которая получает на вход дату в формате DD.MM.YYYY
