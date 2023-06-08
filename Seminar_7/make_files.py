@@ -22,11 +22,14 @@ def make_files(extension: str, min_name: int = 6, max_name: int = 30,
             f.write(data)
 
 
+"""
+на семинаре решение, выше пределал.
+"""
 # VOWES = 'aeiouy'
 # CONSTONATS = 'bcdfghjklmnqrstvwxz'
 #
 #
-# def gen_files(extension: str, min_len_name: int = 6, max_len_name: int = 30, min_len_byte: int = 256,
+# def name_gen(extension: str, min_len_name: int = 6, max_len_name: int = 30, min_len_byte: int = 256,
 #               max_len_byte: int = 4096, count_files: int = 42):
 #     for _ in range(count_files):
 #         rad_string = ''.join(choice(VOWES) if i % 3 == 0 else choice(CONSTONATS)
