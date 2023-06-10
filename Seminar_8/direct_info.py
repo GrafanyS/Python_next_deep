@@ -12,9 +12,9 @@ import os
 import pickle
 from pathlib import Path
 
-
-# def direct_recursion_converts():
-#     pass
+"""
+метод get_dir_size просматривая папки и возвращает их размер
+"""
 
 
 def get_dir_size(path='.') -> int:
@@ -28,6 +28,11 @@ def get_dir_size(path='.') -> int:
     return result
 
 
+"""
+метод get_size просматривая файлы и папки, возвращает их размер
+"""
+
+
 def get_size(path='.') -> int:
     if os.path.isfile(path):
         return os.path.getsize(path)
@@ -35,13 +40,19 @@ def get_size(path='.') -> int:
         return get_dir_size(path)
 
 
-def direct_info(direct: Path):
+"""
+метод direct_info который получает на вход директорию и рекурсивно обходит её и все вложенные директории 
+
+"""
+
+
+def direct_info(direct: Path, name: str):
     json_data = {}
     fieldnames = ['name', 'path', 'size', 'file_or_dir']
     rows = []
-    with open('direct_info.json', 'w') as f_json, \
-            open('direct_info.csv', 'w', newline='', encoding='utf-8') as f_csv, \
-            open('direct_info.pickle', 'wb') as f_pickle:
+    with open(name + '.json', 'w') as f_json, \
+            open(name + '.csv', 'w', newline='', encoding='utf-8') as f_csv, \
+            open(name + '.pickle', 'wb') as f_pickle:
         for dir_path, dir_name, file_name in os.walk(direct):
             json_data.setdefault(dir_path, {})
             for dirs in dir_name:
@@ -58,7 +69,7 @@ def direct_info(direct: Path):
         writer.writeheader()
         writer.writerows(rows)
         pickle.dump(f'{pickle.dumps(json_data)}', f_pickle)
-
-
-if __name__ == '__main__':
-    direct_info(Path(r'F:\GIT\Python_Seminar\first_project\Python_next_deep'))
+#
+#
+# if __name__ == '__main__':
+#     direct_info(Path(r'F:\GIT\Python_Seminar\first_project\Python_next_deep'), 'name')
