@@ -1,0 +1,66 @@
+{
+  "F:\\GIT\\Python_Seminar\\first_project\\Python_next_deep\\Seminar_8": {
+    "__pycache__": {
+      "size": 6626,
+      "file_or_dir": "directory"
+    },
+    "data.json": {
+      "size": 89,
+      "file_or_dir": "file"
+    },
+    "direct_info.py": {
+      "size": 3365,
+      "file_or_dir": "file"
+    },
+    "get_from_user.py": {
+      "size": 3901,
+      "file_or_dir": "file"
+    },
+    "main.py": {
+      "size": 445,
+      "file_or_dir": "file"
+    },
+    "name.csv": {
+      "size": 0,
+      "file_or_dir": "file"
+    },
+    "name.json": {
+      "size": 0,
+      "file_or_dir": "file"
+    },
+    "name.pickle": {
+      "size": 0,
+      "file_or_dir": "file"
+    },
+    "READAME.md": {
+      "size": 4995,
+      "file_or_dir": "file"
+    },
+    "result.json": {
+      "size": 225,
+      "file_or_dir": "file"
+    },
+    "txt_to_json.py": {
+      "size": 1337,
+      "file_or_dir": "file"
+    },
+    "__init__.py": {
+      "size": 111,
+      "file_or_dir": "file"
+    }
+  },
+  "F:\\GIT\\Python_Seminar\\first_project\\Python_next_deep\\Seminar_8\\__pycache__": {
+    "direct_info.cpython-310.pyc": {
+      "size": 2836,
+      "file_or_dir": "file"
+    },
+    "get_from_user.cpython-310.pyc": {
+      "size": 2544,
+      "file_or_dir": "file"
+    },
+    "txt_to_json.cpython-310.pyc": {
+      "size": 1246,
+      "file_or_dir": "file"
+    }
+  }
+}

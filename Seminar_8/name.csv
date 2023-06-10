@@ -1,0 +1,16 @@
+name,path,size,file_or_dir
+__pycache__,F:\GIT\Python_Seminar\first_project\Python_next_deep\Seminar_8,6626,directory
+data.json,F:\GIT\Python_Seminar\first_project\Python_next_deep\Seminar_8,89,file
+direct_info.py,F:\GIT\Python_Seminar\first_project\Python_next_deep\Seminar_8,3365,file
+get_from_user.py,F:\GIT\Python_Seminar\first_project\Python_next_deep\Seminar_8,3901,file
+main.py,F:\GIT\Python_Seminar\first_project\Python_next_deep\Seminar_8,445,file
+name.csv,F:\GIT\Python_Seminar\first_project\Python_next_deep\Seminar_8,0,file
+name.json,F:\GIT\Python_Seminar\first_project\Python_next_deep\Seminar_8,0,file
+name.pickle,F:\GIT\Python_Seminar\first_project\Python_next_deep\Seminar_8,0,file
+READAME.md,F:\GIT\Python_Seminar\first_project\Python_next_deep\Seminar_8,4995,file
+result.json,F:\GIT\Python_Seminar\first_project\Python_next_deep\Seminar_8,225,file
+txt_to_json.py,F:\GIT\Python_Seminar\first_project\Python_next_deep\Seminar_8,1337,file
+__init__.py,F:\GIT\Python_Seminar\first_project\Python_next_deep\Seminar_8,111,file
+direct_info.cpython-310.pyc,F:\GIT\Python_Seminar\first_project\Python_next_deep\Seminar_8\__pycache__,2836,file
+get_from_user.cpython-310.pyc,F:\GIT\Python_Seminar\first_project\Python_next_deep\Seminar_8\__pycache__,2544,file
+txt_to_json.cpython-310.pyc,F:\GIT\Python_Seminar\first_project\Python_next_deep\Seminar_8\__pycache__,1246,file
