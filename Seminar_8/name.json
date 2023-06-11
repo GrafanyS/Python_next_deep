@@ -1,0 +1,118 @@
+{
+  "F:\\GIT\\Python_Seminar\\first_project\\Python_next_deep\\Seminar_8": {
+    "__pycache__": {
+      "size": 11852,
+      "file_or_dir": "directory"
+    },
+    "csv_to_json.py": {
+      "size": 1954,
+      "file_or_dir": "file"
+    },
+    "csv_to_pickle.py": {
+      "size": 642,
+      "file_or_dir": "file"
+    },
+    "data.json": {
+      "size": 148,
+      "file_or_dir": "file"
+    },
+    "direct_info.py": {
+      "size": 4011,
+      "file_or_dir": "file"
+    },
+    "file_out.csv": {
+      "size": 88,
+      "file_or_dir": "file"
+    },
+    "get_from_user.py": {
+      "size": 3915,
+      "file_or_dir": "file"
+    },
+    "index.csv": {
+      "size": 88,
+      "file_or_dir": "file"
+    },
+    "json_in.json": {
+      "size": 458,
+      "file_or_dir": "file"
+    },
+    "json_pickle.bin": {
+      "size": 239,
+      "file_or_dir": "file"
+    },
+    "json_to_csv.py": {
+      "size": 1217,
+      "file_or_dir": "file"
+    },
+    "json_to_pickle.py": {
+      "size": 821,
+      "file_or_dir": "file"
+    },
+    "main.py": {
+      "size": 773,
+      "file_or_dir": "file"
+    },
+    "name.csv": {
+      "size": 0,
+      "file_or_dir": "file"
+    },
+    "name.json": {
+      "size": 0,
+      "file_or_dir": "file"
+    },
+    "name.pickle": {
+      "size": 0,
+      "file_or_dir": "file"
+    },
+    "pickle_to_csv.csv": {
+      "size": 205,
+      "file_or_dir": "file"
+    },
+    "pickle_to_csv.py": {
+      "size": 1430,
+      "file_or_dir": "file"
+    },
+    "READAME.md": {
+      "size": 4995,
+      "file_or_dir": "file"
+    },
+    "result.json": {
+      "size": 225,
+      "file_or_dir": "file"
+    },
+    "txt_to_json.py": {
+      "size": 994,
+      "file_or_dir": "file"
+    },
+    "__init__.py": {
+      "size": 126,
+      "file_or_dir": "file"
+    }
+  },
+  "F:\\GIT\\Python_Seminar\\first_project\\Python_next_deep\\Seminar_8\\__pycache__": {
+    "csv_to_json.cpython-310.pyc": {
+      "size": 1747,
+      "file_or_dir": "file"
+    },
+    "direct_info.cpython-310.pyc": {
+      "size": 2839,
+      "file_or_dir": "file"
+    },
+    "get_from_user.cpython-310.pyc": {
+      "size": 2633,
+      "file_or_dir": "file"
+    },
+    "json_to_csv.cpython-310.pyc": {
+      "size": 1440,
+      "file_or_dir": "file"
+    },
+    "pickle_to_csv.cpython-310.pyc": {
+      "size": 1990,
+      "file_or_dir": "file"
+    },
+    "txt_to_json.cpython-310.pyc": {
+      "size": 1203,
+      "file_or_dir": "file"
+    }
+  }
+}
