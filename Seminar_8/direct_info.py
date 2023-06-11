@@ -19,6 +19,7 @@ from pathlib import Path
 
 def get_dir_size(path='.') -> int:
     result = 0
+    # получение информации о всех файлах в каталоге/директории
     with os.scandir(path) as it:
         for entry in it:
             if entry.is_file():
@@ -34,15 +35,17 @@ def get_dir_size(path='.') -> int:
 
 
 def get_size(path='.') -> int:
+    # Функция isfile()если путь path существует и является обычным файлом, False в противном случае.
     if os.path.isfile(path):
         return os.path.getsize(path)
+    # Функция isdir() путь path существует и является каталогом, False в противном случае.
     elif os.path.isdir(path):
         return get_dir_size(path)
 
 
 """
 метод direct_info который получает на вход директорию и рекурсивно обходит её и все вложенные директории 
-
+os.walk(direct) - Для каждого каталога функция walk возвращает кортеж (путь к каталогу, список каталогов, список файлов)
 """
 
 
@@ -59,17 +62,17 @@ def direct_info(direct: Path, name: str):
                 size = get_size(dir_path + '/' + dirs)
                 json_data[dir_path].update({dirs: {'size': size, 'file_or_dir': 'directory'}})
                 rows.append({'name': dirs, 'path': dir_path, 'size': size, 'file_or_dir': 'directory'})
-            for fi in file_name:
-                size = get_size(dir_path + '/' + fi)
-                json_data[dir_path].update({fi: {'size': size, 'file_or_dir': 'file'}})
-                rows.append({'name': fi, 'path': dir_path, 'size': size, 'file_or_dir': 'file'})
+            for files in file_name:
+                size = get_size(dir_path + '/' + files)
+                json_data[dir_path].update({files: {'size': size, 'file_or_dir': 'file'}})
+                rows.append({'name': files, 'path': dir_path, 'size': size, 'file_or_dir': 'file'})
             print(f'{dir_path = }\n{dir_name = }\n{file_name = }\n')
         json.dump(json_data, f_json, indent=2)
         writer = csv.DictWriter(f_csv, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(rows)
         pickle.dump(f'{pickle.dumps(json_data)}', f_pickle)
-#
-#
+
+
 # if __name__ == '__main__':
-#     direct_info(Path(r'F:\GIT\Python_Seminar\first_project\Python_next_deep'), 'name')
+#     direct_info(Path(r'F:\GIT\Python_Seminar\first_project\Python_next_deep\Seminar_8'), 'name')
