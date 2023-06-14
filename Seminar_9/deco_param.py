@@ -54,4 +54,5 @@ def fact(num: int) -> int:
     return res
 
 
-print(fact(5))
+if __name__ == '__main__':
+    print(fact(5))
