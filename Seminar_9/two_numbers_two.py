@@ -15,31 +15,27 @@ def decorate(func: Callable):
 
     def wrapper(*args):
         input_count, input_num = args
-        if MIN_COUNT > input_count or input_num > MAX_COUNT:
+        if MIN_COUNT > input_count or input_count > MAX_COUNT:
             input_count = random.randint(MIN_COUNT, MAX_COUNT)
+        # if MIN_NUM > input_num or input_num > MAX_NUM:
         if MIN_NUM > input_num or input_num > MAX_NUM:
-            if MIN_NUM > input_num or input_num > MAX_NUM:
-                input_num = random.randint(MIN_NUM, MAX_NUM)
-            return func(input_count, input_num)
+            input_num = random.randint(MIN_NUM, MAX_NUM)
+        return func(input_count, input_num)
 
     return wrapper
 
 
 @decorate
-def two_numbers(count_try: int, num: int) -> Callable[[], None]:
-    def random_numbers():
-        for i in range(1, count_try + 1):
-            user_input = input(' Введите число для отгадывания от 1 до 100: ')
-            if int(user_input) == num:
-                print(f'Вы угадали с {i} попытки')
-                break
-        else:
-            print('Вы не угадали')
-
-    return random_numbers
+def two_numbers_two(count_try: int, num: int):
+    for i in range(1, count_try + 1):
+        user_input = input(' Введите число для отгадывания от 1 до 100: ')
+        if int(user_input) == num:
+            print(f'Вы угадали с {i} попытки')
+            break
+    else:
+        print('Вы не угадали')
 
 
 if __name__ == '__main__':
-    res = None
-    two_numbers(11, 20)
-    # res()
+    two_numbers_two(11, 20)
+

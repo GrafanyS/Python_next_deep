@@ -10,7 +10,7 @@ import os
 from typing import Callable, Any
 
 
-def decorator(func: Callable):
+def decorator_json(func: Callable):
     def wrapper(*args, **kwargs) -> Any:
         # os.path.exists(path) - возвращает True, если path указывает на существующий путь или дескриптор открытого
         # файла.
@@ -35,7 +35,7 @@ def decorator(func: Callable):
     return wrapper
 
 
-@decorator
+@decorator_json
 def multy(a: int, b: int, *args, **kwargs):
     return a * b
 
