@@ -16,5 +16,5 @@ if __name__ == '__main__':
     two_numbers_two(11, 20)
     multy(6, 7, temp=2, res=3, c=2, d=5)
     print(fact(5))
-    # gen_csv_with_nums()
+    gen_csv_with_nums()
     quadratic_equation()
