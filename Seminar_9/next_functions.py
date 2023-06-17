@@ -38,7 +38,7 @@ def from_csv_wrap(file_name: str):
 
 # Декоратор, сохраняющий переданные параметры и результаты работы функции в json файл.
 def save_to_json(func):
-    file = Path(f"{func.__name__}.json")
+    file = Path(f"data/{func.__name__}.json")
     if file.is_file():
         with open(file, 'r', encoding='utf-8') as f:
             json_file = json.load(f, ensure_ascii=False)
@@ -59,7 +59,7 @@ def save_to_json(func):
 
 
 @save_to_json
-@from_csv_wrap('random.csv')
+@from_csv_wrap('data/random.csv')
 # Нахождение корней квадратного уравнения
 def quadratic_equation(a: complex, b: complex, c: complex):
     if a != 0:
