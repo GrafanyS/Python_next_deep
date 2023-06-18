@@ -24,4 +24,4 @@ if __name__ == '__main__':
 
     print(animal_from_fabric)
     print(animal_from_fabric1)
-    print(fabric.make_animal('fish', "Карп", 10, 5, "Речной"))
+    print(fabric.make_animal('Fish', "Карп", 10, 5, "Речной"))

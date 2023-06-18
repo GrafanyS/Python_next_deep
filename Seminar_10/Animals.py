@@ -32,28 +32,29 @@ class Bird(Animals):
         self._sound = sound
 
     def move(self):
-        return "Fly"
+        return "Летает"
 
     def say(self):
         return self._sound
 
     def __str__(self):
-        return f"{super().__str__()} {self.bird_type}"
+        return f"{super().__str__()} {self.bird_type} {self.move()} {self.say()}"
 
 
 class Dog(Animals):
     def __init__(self, name: str, weight: int, age: int, dog_type: str):
         super().__init__(name, weight, age)
         self.dog_type = dog_type
+        self.commands = []
 
     def move(self):
-        return "Run"
+        return "Бегает"
 
     def say(self):
-        return "Gov"
+        return "Гав-гав"
 
     def __str__(self):
-        return f"{super().__str__()} {self.dog_type}"
+        return f"{super().__str__()} {self.dog_type} {self.move()} {self.say()}"
 
 
 class Fish(Animals):
@@ -62,13 +63,13 @@ class Fish(Animals):
         self.fish_type = fish_type
 
     def move(self):
-        return "Swim"
+        return "Плавает"
 
     def say(self):
         return ""
 
     def __str__(self):
-        return f"{super().__str__()} {self.fish_type}"
+        return f"{super().__str__()} {self.fish_type} {self.move()}"
 
 
 if __name__ == '__main__':
