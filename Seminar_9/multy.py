@@ -15,8 +15,8 @@ def decorator_json(func: Callable):
         # os.path.exists(path) - возвращает True, если path указывает на существующий путь или дескриптор открытого
         # файла.
         # os.path.getsize(path) - размер файла в байтах.
-        if os.path.exists(func.__name__) and os.path.getsize(f'{func.__name__}.json') > 0:
-            with open(f'{func.__name__}.json', 'r', encoding='utf-8') as f_in:
+        if os.path.exists(func.__name__) and os.path.getsize(f'data/{func.__name__}.json') > 0:
+            with open(f'data/{func.__name__}.json', 'r', encoding='utf-8') as f_in:
                 data = json.load(f_in)
             data.append({})
         else:
@@ -28,9 +28,9 @@ def decorator_json(func: Callable):
         result = func(*args, **kwargs)
         data[-1]['result'] = result
         func(*args, **kwargs)
-        with open(f'{func.__name__}.json', 'w', encoding='utf-8') as f_js:
+        with open(f'data/{func.__name__}.json', 'w', encoding='utf-8') as f_js:
             json.dump(data, f_js, indent=2)
-            print(f'Файл с именем декорируемой функции {func.__name__}.json сохранен')
+            print(f'Файл с именем декорируемой функции data/{func.__name__}.json сохранен')
 
     return wrapper
 

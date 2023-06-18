@@ -38,10 +38,10 @@ def from_csv_wrap(file_name: str):
 
 # Декоратор, сохраняющий переданные параметры и результаты работы функции в json файл.
 def save_to_json(func):
-    file = Path(f"{func.__name__}.json")
+    file = Path(f"data/{func.__name__}.json")
     if file.is_file():
         with open(file, 'r', encoding='utf-8') as f:
-            json_file = json.load(f, ensure_ascii=False)
+            json_file = json.load(f)
     else:
         json_file = []
 
@@ -59,7 +59,7 @@ def save_to_json(func):
 
 
 @save_to_json
-@from_csv_wrap('random.csv')
+@from_csv_wrap('data/random.csv')
 # Нахождение корней квадратного уравнения
 def quadratic_equation(a: complex, b: complex, c: complex):
     if a != 0:
@@ -72,7 +72,7 @@ def quadratic_equation(a: complex, b: complex, c: complex):
 
 
 # Генерация csv файла с тремя случайными числами в каждой строке. 100-1000 строк.
-def gen_csv_with_nums(name: str = 'random', min_num: int = -1000, max_num: int = 1000):
+def gen_csv_with_nums(name: str = 'data/random', min_num: int = -1000, max_num: int = 1000):
     rows = []
     rows_count = random.randint(100, 1000)
     for _ in range(rows_count):
@@ -86,5 +86,5 @@ def gen_csv_with_nums(name: str = 'random', min_num: int = -1000, max_num: int =
 
 
 if __name__ == '__main__':
-    # gen_csv_with_nums()
+    gen_csv_with_nums()
     quadratic_equation()
