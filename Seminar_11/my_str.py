@@ -6,22 +6,29 @@ from datetime import time
 
 
 class MyString(str):
-    """Рассширяем класс str."""
+    """Extending the str class."""
+
     def __new__(cls, value: str, author: str):
-        """Метод"""
+        """We extend the new method with the value and name parameters."""
         instance = super().__new__(cls, value)
         instance.author = author
         instance.time = time()
         return instance
 
 
-if __name__ == '__main__':
+def run_mystring():
     mystring = MyString('сама строка', 'доп. параметр')
     print(mystring.author)
     print(mystring.time)
     print(mystring)
     print(mystring.upper())
     print(mystring.title())
+    help(mystring)
+    help(MyString)
+
+
+if __name__ == '__main__':
+    run_mystring()
 
 """
 # Добавьте к задачам 1 и 2 строки документации для классов.
