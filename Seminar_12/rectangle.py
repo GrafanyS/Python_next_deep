@@ -153,4 +153,5 @@ if __name__ == '__main__':
     # print(res_sum.a, res_sum.b)
     # res_sub = rect_1 - rect_2
     # print(res_sub.a, res_sub.b)
+    
 """
