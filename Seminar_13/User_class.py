@@ -70,8 +70,6 @@ class Access:
 
 
 if __name__ == '__main__':
-    # data = read_json('data.json')
-    # print(*parse_data(data))
     access = Access()
     print(*access.data)
     print(access.enter_system(1, "Андрей"))

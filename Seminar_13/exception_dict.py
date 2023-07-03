@@ -5,7 +5,7 @@
 """
 
 
-def get_default(data: dict, key: int, value: int | str = 1):
+def get_default(data: dict, key: int | str, value: int | str = 1):
     try:
         return data[key]
     except KeyError:
@@ -20,7 +20,7 @@ def get_default(data: dict, key: int | str, value: int | str = 1):
         result = value
     return result
 
-
+"""
 if __name__ == '__main__':
     print(get_default({1: '1', 2: '2', 3: '3'}, 4))
-"""
+
