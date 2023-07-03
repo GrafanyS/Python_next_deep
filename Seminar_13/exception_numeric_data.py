@@ -16,34 +16,13 @@ def get_number(prompt: str) -> [int, float]:
             try:
                 return float(a_number)
             except ValueError as e:
-                print(f'Допускаются только числовые значения. : {e}')
+                print(f'Допускаются только числовые значения. : {e}\n Попробуйте снова!')
 
 
 def app():
-    print(get_number('Введите целое число или число с плавающей запятой: '))
-    # print(type(get_number('Введите целое число или число с плавающей запятой: ')))
+    # print(get_number('Введите целое число или число с плавающей запятой: '))
+    print(type(get_number('Введите целое число или число с плавающей запятой: ')))
 
 
 if __name__ == '__main__':
     app()
-
-"""
-def num_exc():
-    while True:
-        num = input('Введите целое или вещественное число')
-        try:
-            num = int(num)
-            break
-        except ValueError as e:
-            try:
-                num = float(num)
-                break
-            except ValueError as e:
-                print(f'Вы ввели неправильное значение: {e}\n Попробуйте снова!')
-
-    return num
-
-
-if __name__ == '__main__':
-    print(type(num_exc()))
-"""
